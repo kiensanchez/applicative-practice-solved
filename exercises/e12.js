@@ -6,9 +6,18 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+  let allMoons = 0;
+  let planetNames = data.planets;
+
+  let sum = planetNames.map((item) => {
+    if (!item.moonsCount) {
+      allMoons += 0;
+    } else allMoons += item.moonsCount;
+  });
+
+  return allMoons;
+  3;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"
