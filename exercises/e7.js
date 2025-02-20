@@ -6,11 +6,7 @@ import { data } from "../data/data";
 
 export function getPlanetsNamesWithMoons(data) {
   // Your code goes here...
-  let planetNames = data.planets;
-
-  let array = planetNames.filter((item) => item.moons);
-
-  return array.map((item) => item.name);
+  return data.planets.filter((item) => item.moons).map((item) => item.name);
 }
 
 // === TEST YOURSELF ===
